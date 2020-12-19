@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+header {
+    background-color: white;
+    border-bottom: 1px solid #CCCCCC;
+    height: 5em;
+    width: 100%;
+}
+.hbnb_logo {
+    background: url("../images/logo.png") no-repeat;
+    height: 100%;
+    background-size: 10.5em;
+    background-position: 1.5em center;
+}
+#api_status {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #CCCCCC;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+}
+#api_status.available {
+    background-color: #ff545f;
+}
+#api_status:hover::after,
+#api_status.available:hover::after {
+    display: inline-block;
+    text-align: center;
+    font-size: .75em;
+    letter-spacing: .05em;
+    width: 135px;
+    color: white;
+    position: absolute;
+    padding: 3px;
+    right: 50px;
+    top: 10px;
+}
+#api_status.available:hover::after {
+    content: 'HBNB API IS ALIVE!';
+    background-color: salmon;
+}
+#api_status:hover::after {
+    content: 'HBNB API IS DOWN';
+    background-color: gray;
+}
